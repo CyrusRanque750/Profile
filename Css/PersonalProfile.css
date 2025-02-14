@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    background-color: #F0F0F0;
+    background: url('image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.home {
+    min-height: 100vh;
+}  
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid hsl(0 0% 50%);
+	height: 70px;
+	background: hsl(0 0% 100% / 0.75);
+	backdrop-filter: blur(4px);
+	z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+.nav__content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+    max-width: 1000px;
+	padding: 0 1rem;
+	margin: 0 auto;
+}
+.nav-links{
+	list-style: none;
+}
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 100px;
+}
+nav a {
+	text-decoration: none;
+	color: black;
+	font-weight: 400;
+	padding: 10px 15px;
+	border-radius: 100px;
+	font-size: 1rem;
+    transition: color 0.3s;
+}
+.home-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Hover Style */
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 3px;
+    position: relative;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0; 
+    background-color: black;
+    transition: width 0.3s; 
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* --Picture-- */
+.container {
+    gap: 20px;
+    height: 10vh;
+    padding-top: 35vh; 
+}
+.picture{
+    height: auto;
+    width: 200px; 
+    border-radius: 100px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.name{
+    color: #427bb1;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 250px;
+    background: linear-gradient(to right, #5994cb, #a784e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.introduction{
+    color: #566877;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 250px;
+}
+.rectangle{
+    height: 10vh;
+    padding-top: 30vh; 
+    border: 2px solid black;
+    padding: 100px;
+    margin-left: 80%;
+    width: 40px;
+    display: flex;
+}
+
+.cyrus{
+    background: none;
+    -webkit-text-fill-color: #ffb3e6;
+}
+
+/* --ABOUT-- */
+.about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    scroll-margin-top: 70px;
+}
+
+.about-header h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3em;
+    background: linear-gradient(to right, #5994cb, #a784e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container-about {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    text-align: left;
+    max-width: 900px;
+    width: 100%;
+}
+
+.about-img {
+    display: flex;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.cyrus-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-info {
+    max-width: 700px;
+    text-align: justify;
+    color: #566877;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+}
+
+.skill-pic {
+    height: 80px;
+    width: 80px;
+}
+/*--Projects-- */
+.projects{
+    height: 150vh;
+    scroll-margin-top: 180px;
+}
+.container-project{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+    top: 50px;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    align-items: center;
+}
+
+.wrss-project,
+.python-project{
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    justify-content: center;
+    flex-direction: row;
+}
+.wrss{
+    justify-content: center;
+    font-size: 1em;
+    font-weight: 500;
+    color: #566877;
+    text-align: justify;
+}
+/* --CERTIFICATES-- */
+.certificates{
+    min-height: 100vh;
+    scroll-margin-top: 180px;
+    gap: 20px;
+    justify-content: center;
+}
+.header-cert{
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 3em;
+    background: linear-gradient(to right, #5994cb, #a784e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.certificate-frontEnd,
+.certificate-cplus {
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+    width: 9    0%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    justify-content: center;
+    flex-direction: row;
+}
+.container-frontEnd{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+    top: 50px;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    align-items: center;
+}
+.frontEnd-cert{
+    width: 100%;
+    height: 400px;
+    max-width: 500px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.certificate-cplus{
+    width: 200%;
+}
+/* --CONTACTS-- */
+.contact{
+    height: 40vh;
+    scroll-margin-top: 180px;
+    background-color:  #1A1A1A;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:  #F0F0F0;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 200px;
+}
+.header-sns{
+    position: relative;
+    text-align: justify;
+    align-items: center;        
+    display: flex;
+    flex-wrap: wrap;
+}
+.socialMedia{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #F0F0F0;
+}
+.socialMedia img{
+    max-width: 50px;
+    height: auto;
+}
+li{
+   list-style: none;
+   padding: 3px 0 0 5px;
+}
+.sns-contact{
+    color:   #F0F0F0;
+    position: relative;
+}
+
+.locate{
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 500;
+    position: relative;
+}
+.sns-locate{
+    position: relative;
+}
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .nav__content {
+        width: 90%;
+    }
+    .nav-center {
+        gap: 50px;
+    }
+    .footer{
+        background-color: #1A1A1A;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav__content {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .nav-center {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .name {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+    .introduction {
+        font-size: 1rem;
+        padding-left: 0;
+        text-align: center;
+    }
+    .container-about {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .about-img {
+        justify-content: center;
+    }
+    .about-info {
+        text-align: center;
+    }
+    .footer {
+        justify-content: space-between;
+        text-align: left;
+        padding: 20px 50px;
+        height: 80vh;
+        background-color: #1A1A1A;
+    }
+    .header-sns,
+    .location {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        width: auto;
+    }
+    
+    .sns-contact,
+    .sns-locate {
+        position: static;
+    }
+    .certificates {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-about {
+        width: auto;
+    }
+    .nav-center li{
+        display: none;
+    }
+    .home-ul.show {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .home-ul.show .nav-center li {
+        display: block;
+    }
+    .home-ul.show {
+        display: flex;
+    }
+    .home-ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+@media (max-width: 480px) {
+    nav {
+        height: 60px;
+    }
+
+    /* Show the hamburger menu at 480px */
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-center {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Hide list items initially */
+    .nav-center li {
+        display: none;
+    }
+
+    .home-ul.show .nav-center li {
+        display: block;
+    }
+
+    /* Hide the nav links initially */
+    .home-ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-center {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Show menu when toggled */
+    .home-ul.show {
+        display: flex;
+    }
+    .name {
+        font-size: 1.75rem;
+    }   
+    .introduction {
+        font-size: 0.9rem;
+    }
+    .about-info {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .certificate-container {
+        width: 80%;
+    }
+    .footer {
+        padding: 20px 100px;
+    }
+
+    .header-sns {
+        width: 300px;
+        justify-content: flex-start;
+    }
+
+    .location {
+        justify-content: flex-start;
+    }
+   .container-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 20px;
+   }
+   .certificate-frontEnd,
+   .certificate-cplus{
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+   }
+   .container-frontEnd{
+    flex-direction: column;
+    align-items: center;
+   }
+}
